@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.send('<h1>This is a test project from <i>green-api</i> by <i>baidussenov!</i></h1>')
 })
 
-app.post('/double', (req, res) => {
+app.post('/', (req, res) => {
     const { num } = req.body
     if (!num)
         return res.json({ success: false, msg: 'Param num missing' })
