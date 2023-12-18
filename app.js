@@ -48,7 +48,13 @@ app.post('/', (req, res) => {
                     })
             }, 3500) // 3500 because 1.5 sec is already spent
         })
-    } catch (err) { console.error(err.msg) }
+    } catch (err) { 
+        console.error(err.msg)
+        res.json({
+            success: false,
+            msg: err.msg
+        })
+     }
 })
 
 app.listen(port, () => {
